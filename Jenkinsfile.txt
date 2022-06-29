@@ -100,7 +100,7 @@ pipeline {
 		stage('System Test') {
             steps {
 				//Change git url below as per your forked github repository URL
-				git url: 'https://github.com/sirisisa/EMAPITests-ex.git'
+				git url: 'https://github.com/sirisisa/EMSystemTests-ex.git'
             	sh 'mvn -Dtest=ExpenseManagerSystemTest test'
             }
         }
@@ -111,7 +111,7 @@ pipeline {
 		stage('BDD Test') {
             steps {
 				//Change git url below as per your forked github repository URL
-				git url: 'https://github.com/sirisisa/EMAPITests-ex.git'
+				git url: 'https://github.com/sirisisa/EMSystemTests_BDD.git'
             	sh 'mvn -Dtest=TestRunner test'
             }
         }
